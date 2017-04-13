@@ -7,7 +7,7 @@ FROM alpine:3.5
 
 # Dev & build
 ARG GFLAGS_VERSION=v2.2.0
-ARG GUETZLI_VERSION=v1.0
+ARG GUETZLI_VERSION=v1.0.1
 RUN \
 	apk add --no-cache --virtual .build-deps \
 		libpng-dev \
