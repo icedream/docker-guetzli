@@ -9,11 +9,12 @@ FROM alpine:3.5
 ARG GUETZLI_VERSION=v1.0.1
 RUN \
 	apk add --no-cache --virtual .build-deps \
-		libpng-dev \
 		alpine-sdk \
-		git \
-		coreutils \
 		cmake \
+		coreutils \
+		git \
+		libpng-dev \
+		zlib-dev \
 		&&\
 \
 	git clone "https://github.com/google/guetzli.git" /var/tmp/guetzli &&\
