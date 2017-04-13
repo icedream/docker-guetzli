@@ -22,6 +22,7 @@ RUN \
 		git checkout "${GUETZLI_VERSION}" &&\
 		make -j$(nproc) config=release \
 			TARGETDIR=/usr/local/bin \
+			LDFLAGS="-static -lpng -lz -lm" \
 	) &&\
 \
 	apk del --no-cache .build-deps &&\
